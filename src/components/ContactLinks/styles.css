@@ -1,0 +1,15 @@
+.ContactLinks {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.ContactLinks a {
+  padding: 5px;
+  margin: 0 3px;
+  font-size: 18px;
+  color: #FFF;
+}
+
+.ContactLinks a:hover {
+  color: #d0c365;
+}

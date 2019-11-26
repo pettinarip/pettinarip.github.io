@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  background-color: #555;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: "Bree Serif", sans-serif;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+::-moz-selection {
+  background-color: #d0c365;
+}
+
+::selection {
+  background-color: #d0c365;
+}

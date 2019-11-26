@@ -1,0 +1,52 @@
+.App {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.App-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+
+.App-map {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.App-content {
+  padding-left: 400px;
+}
+
+@media all and (max-width: 50em) {
+  .App {
+    position: inherit;
+  }
+
+  .App-sidebar {
+    position: relative;
+    width: 100%;
+  }
+
+  .App-map {
+    display: none;
+  }
+
+  .App-content {
+    padding-left: 0;
+  }
+}
