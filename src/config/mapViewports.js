@@ -1,3 +1,6 @@
+import capTrips from "../data/cap.json"
+import ushTrips from "../data/ush.json"
+
 const mapViewports = {
   about: {
     viewport: {
@@ -7,6 +10,7 @@ const mapViewports = {
       pitch: 45,
       bearing: 0,
     },
+    trips: ushTrips,
   },
   jobs: {
     viewport: {
@@ -16,6 +20,7 @@ const mapViewports = {
       pitch: 45,
       bearing: 0,
     },
+    trips: capTrips,
   },
   projects: {
     viewport: {
@@ -23,6 +28,7 @@ const mapViewports = {
       longitude: -84.6335446,
       zoom: 3,
     },
+    trips: [],
   },
 }
 

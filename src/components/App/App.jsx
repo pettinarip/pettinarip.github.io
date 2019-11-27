@@ -4,11 +4,9 @@ import { Router, Match } from "@reach/router"
 import Sidebar from "../Sidebar"
 import Content from "../Content"
 import Page from "../Page"
-
 import Map from "../Map"
+
 import mapViewports from "../../config/mapViewports"
-import capTrips from "../../data/cap.json"
-import ushTrips from "../../data/ush.json"
 
 import "./styles.css"
 
@@ -20,18 +18,12 @@ const App = ({ edges }) => {
       <div className="App-map">
         <Match path="/:page">
           {props => {
-            const config =
-              props.match &&
-              props.match.page &&
-              mapViewports.hasOwnProperty(props.match.page)
-                ? mapViewports[props.match.page]
+            const { match } = props
+            const { viewport, trips } =
+              match && mapViewports.hasOwnProperty(match.page)
+                ? mapViewports[match.page]
                 : mapViewports.about
-            return (
-              <Map
-                viewState={config.viewport}
-                trips={props.match.page === "about" ? ushTrips : capTrips}
-              />
-            )
+            return <Map viewState={viewport} trips={trips} />
           }}
         </Match>
       </div>
