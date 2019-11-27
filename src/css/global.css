@@ -20,6 +20,16 @@ ul li {
   margin-bottom: 10px;
 }
 
+a,
+a:active,
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: #d0c365;
+}
+
 ::-moz-selection {
   background-color: #d0c365;
 }

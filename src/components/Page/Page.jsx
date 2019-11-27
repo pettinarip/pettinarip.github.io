@@ -1,7 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Page = ({ html }) => <div dangerouslySetInnerHTML={{ __html: html }} />
+import "./styles.css"
+
+const Page = ({ html }) => (
+  <div className="Page-content" dangerouslySetInnerHTML={{ __html: html }} />
+)
 
 Page.propTypes = {
   html: PropTypes.string,
