@@ -1,23 +1,39 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
-import "./styles.css"
+const ContactLinksStyled = styled.div`
+  padding: 10px 0;
+  text-align: center;
+`
+
+const Link = styled.a`
+  padding: 5px;
+  margin: 0 3px;
+  font-size: 18px;
+  color: #fff;
+
+  &:hover {
+    color: #d0c365;
+  }
+`
 
 const ContactLinks = props => (
-  <div className="ContactLinks">
-    <a href={props.github} target="__blank">
+  <ContactLinksStyled>
+    <Link href={props.github} target="__blank">
       <FontAwesomeIcon icon={faGithub} />
-    </a>
-    <a href={props.linkedin} target="__blank">
+    </Link>
+    <Link href={props.linkedin} target="__blank">
       <FontAwesomeIcon icon={faLinkedin} />
-    </a>
-    <a href={`mailto:${props.mail}`} target="__blank">
+    </Link>
+    <Link href={`mailto:${props.mail}`} target="__blank">
       <FontAwesomeIcon icon={faEnvelope} />
-    </a>
-  </div>
+    </Link>
+  </ContactLinksStyled>
 )
 
 ContactLinks.propTypes = {
