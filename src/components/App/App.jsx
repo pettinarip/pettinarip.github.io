@@ -1,5 +1,5 @@
 import React from "react"
-import { Router, Match } from "@reach/router"
+import { Router, Match, Redirect } from "@reach/router"
 
 import Sidebar from "../Sidebar"
 import Content from "../Content"
@@ -34,6 +34,7 @@ const App = ({ edges }) => {
             {edges.map(({ node }, index) => (
               <Page key={index} path={node.frontmatter.path} html={node.html} />
             ))}
+            <Redirect from="/" to="/about" default noThrow />
           </Content>
         </Router>
       </div>
