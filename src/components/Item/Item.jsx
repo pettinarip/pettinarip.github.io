@@ -8,9 +8,9 @@ const Item = props => (
   <div className="Item">
     <Link
       to={props.to}
-      getProps={({ isCurrent }) => {
+      getProps={({ isPartiallyCurrent }) => {
         return {
-          className: isCurrent ? "active title" : "title",
+          className: isPartiallyCurrent ? "active title" : "title",
         }
       }}
     >

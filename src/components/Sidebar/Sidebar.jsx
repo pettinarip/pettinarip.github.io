@@ -20,13 +20,8 @@ const Sidebar = props => (
     <Divisor />
 
     <Menu>
-      {props.edges.map(({ node }, index) => (
-        <Item
-          key={index}
-          to={node.frontmatter.path}
-          text={node.frontmatter.title}
-        />
-      ))}
+      <Item to="/about" text="About me" />
+      <Item to="/jobs" text="Jobs & Exp" />
     </Menu>
     <ContactLinks
       github="https://github.com/pettinarip"
@@ -38,7 +33,6 @@ const Sidebar = props => (
 
 Sidebar.propTypes = {
   className: PropTypes.string,
-  edges: PropTypes.array,
 }
 
 export default Sidebar

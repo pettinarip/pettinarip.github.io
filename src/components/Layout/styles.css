@@ -1,11 +1,11 @@
-.App {
+.Layout {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
 
-.App-sidebar {
+.Layout-sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,33 +21,33 @@
   flex-flow: column nowrap;
 }
 
-.App-map {
+.Layout-map {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-.App-content {
+.Layout-content {
   padding-left: 400px;
 }
 
 @media all and (max-width: 50em) {
-  .App {
+  .Layout {
     position: inherit;
   }
 
-  .App-sidebar {
+  .Layout-sidebar {
     position: relative;
     width: 100%;
     padding-bottom: 20px;
   }
 
-  .App-map {
+  .Layout-map {
     display: none;
   }
 
-  .App-content {
+  .Layout-content {
     padding-left: 0;
   }
 }
