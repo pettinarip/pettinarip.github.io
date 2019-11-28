@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{Dtc0:function(t,e,n){"use strict";n.r(e);var o=n("q1tI"),r=n.n(o),a=n("YwZP");e.default=function(){return r.a.createElement(a.Redirect,{from:"/",to:"/about",default:!0,noThrow:!0})}}}]);
+//# sourceMappingURL=component---src-pages-index-jsx-d37750f62972759fae8e.js.map
