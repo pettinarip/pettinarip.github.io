@@ -1,12 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Seo from "../components/Seo"
+
 export default function PageTemplate({ data }) {
   const { markdownRemark } = data
-  const { html } = markdownRemark
+  const { html, frontmatter } = markdownRemark
 
-  return <div dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <>
+      <Seo title={frontmatter.title} />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  )
 }
+
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {

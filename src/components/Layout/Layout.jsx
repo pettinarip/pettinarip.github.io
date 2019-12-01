@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { Match } from "@reach/router"
 import { config } from "@fortawesome/fontawesome-svg-core"
 
+import Seo from "../Seo"
 import Sidebar from "../Sidebar"
 import Content from "../Content"
 import Map from "../Map"
@@ -17,13 +18,8 @@ config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatica
 
 const Layout = ({ children }) => (
   <div className="Layout">
-    <Helmet
-      title="Pablo Pettinari"
-      meta={[
-        { name: `description`, content: `Pablo Pettinari's site` },
-        { name: `keywords`, content: `Pablo, Pettinari, site` },
-      ]}
-    />
+    <Seo title="Site" />
+
     <Sidebar className="Layout-sidebar" />
 
     <div className="Layout-map">
