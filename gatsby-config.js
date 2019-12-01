@@ -15,35 +15,35 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `pages`,
+        path: `${__dirname}/content/pages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/content/assets`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `pettinarip-site`,
-        short_name: `starter`,
+        name: `Pablo Pettinari`,
+        short_name: `Pablo`,
         start_url: `/`,
-        background_color: `#d0c365`,
-        theme_color: `#d0c3659`,
+        background_color: `#000000`,
+        theme_color: `#d0c365`,
         display: `minimal-ui`,
-        icon: `src/images/profile.jpg`,
+        icon: `${__dirname}/content/assets/profile.jpg`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
-      },
-    },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
   ],
 }

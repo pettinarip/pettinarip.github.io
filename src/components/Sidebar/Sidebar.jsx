@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
 import ProfilePhoto from "../ProfilePhoto"
 import Title from "../Title"
@@ -9,27 +10,39 @@ import Item from "../Item"
 import ContactLinks from "../ContactLinks"
 import Divisor from "../Divisor"
 
-import photo from "../../images/profile.jpg"
+const Sidebar = props => {
+  const data = useStaticQuery(graphql`
+    query BioQuery {
+      avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
+        childImageSharp {
+          fixed(width: 500, height: 500) {
+            src
+          }
+        }
+      }
+    }
+  `)
 
-const Sidebar = props => (
-  <div className={props.className}>
-    <ProfilePhoto photo={photo} />
-    <Title text="Pablo Pettinari" />
-    <Subtitle text="Front End Engineer" />
+  return (
+    <div className={props.className}>
+      <ProfilePhoto photo={data.avatar.childImageSharp.fixed.src} />
+      <Title text="Pablo Pettinari" />
+      <Subtitle text="Front End Engineer" />
 
-    <Divisor />
+      <Divisor />
 
-    <Menu>
-      <Item to="/about" text="About me" />
-      <Item to="/jobs" text="Jobs & Exp" />
-    </Menu>
-    <ContactLinks
-      github="https://github.com/pettinarip"
-      linkedin="https://www.linkedin.com/in/pablo-pettinari-8386b525/"
-      mail="pettinarip@gmail.com"
-    />
-  </div>
-)
+      <Menu>
+        <Item to="/about" text="About me" />
+        <Item to="/jobs" text="Jobs & Exp" />
+      </Menu>
+      <ContactLinks
+        github="https://github.com/pettinarip"
+        linkedin="https://www.linkedin.com/in/pablo-pettinari-8386b525/"
+        mail="pettinarip@gmail.com"
+      />
+    </div>
+  )
+}
 
 Sidebar.propTypes = {
   className: PropTypes.string,
