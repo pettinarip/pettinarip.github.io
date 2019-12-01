@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import { Match } from "@reach/router"
 import { config } from "@fortawesome/fontawesome-svg-core"
 

@@ -7,8 +7,16 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const ContactLinksStyled = styled.div`
+  bottom: 0;
+  position: absolute;
+  width: 100%;
   padding: 10px 0;
   text-align: center;
+
+  @media all and (max-width: 50em) {
+    position: static;
+    margin-top: 50px;
+  }
 `
 
 const Link = styled.a`

@@ -13,7 +13,7 @@ import photo from "../../images/profile.jpg"
 
 const Sidebar = props => (
   <div className={props.className}>
-    <ProfilePhoto photo={photo} size={250} />
+    <ProfilePhoto photo={photo} />
     <Title text="Pablo Pettinari" />
     <Subtitle text="Front End Engineer" />
 

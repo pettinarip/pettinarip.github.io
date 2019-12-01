@@ -3,19 +3,13 @@ import PropTypes from "prop-types"
 
 import "./styles.css"
 
-const ProfilePhoto = props => (
-  <div
-    className="ProfilePhoto"
-    style={{ width: props.size, height: props.size }}
-  >
-    <div className="ProfilePhoto-photo">
-      <img src={props.photo} alt="Profile" />
-    </div>
+const ProfilePhoto = ({ photo }) => (
+  <div className="ProfilePhoto">
+    <img className="ProfilePhoto-photo" src={photo} alt="Profile" />
   </div>
 )
 
 ProfilePhoto.propTypes = {
-  size: PropTypes.number.isRequired,
   photo: PropTypes.string.isRequired,
 }
 

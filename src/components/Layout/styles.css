@@ -13,12 +13,8 @@
   width: 400px;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
-
-  display: -ms-flexbox;
-
-  display: flex;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+  overflow: auto;
+  min-height: 520px;
 }
 
 .Layout-map {
@@ -40,7 +36,6 @@
   .Layout-sidebar {
     position: relative;
     width: 100%;
-    padding-bottom: 20px;
   }
 
   .Layout-map {
