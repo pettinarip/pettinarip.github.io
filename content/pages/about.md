@@ -11,6 +11,6 @@ I consider myself as a dedicated person that is continuously learning the latest
 
 - Born in Ushuaia, Tierra del Fuego, Argentina.
 - Studied Computer Engineering in UADE (Universidad Argentina de la Empresa).
-- Always reading books or articles, and watching conferences about programming skills or new methodologies to apply in my daily work.
+- Always reading books or articles, listening podcasts and watching conferences about programming skills or new methodologies to apply in my daily workflow.
 - Love reading SF books, especially space operas.
 - Love soccer/football/futbol/⚽.

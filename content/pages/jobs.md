@@ -20,7 +20,7 @@ Working fulltime for [Ten-X](https://www.ten-x.com/), a commercial real-estate c
 A data visualization tool to analyze data with three view types: a single chart, a multi-chart, and a table view. The app has two user roles: client and admin, where the admin has the role to "clean" the data that the client role needed to interact with.
 The app communicates with a REST API developed by the client. There was an extra effort to improve performance mainly to support IE browsers. The whole app was built with React/Redux ecosystem and the charts were done using some helper methods from the D3 library.
 
-### Freelancer (2017~2017)
+### Freelancer (2017~present)
 
 - <a href="https://timingsense.com/" target="_blank">Timingsense</a>. A CRUD app in React for race events which includes a small D3 visualization tool that displays the final configuration in a friendly way.
 
