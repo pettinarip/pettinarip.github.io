@@ -7,8 +7,6 @@ import { TripsLayer } from "@deck.gl/geo-layers"
 
 import mapStyles from "../../config/mapStyles.json"
 
-const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN
-
 const ambientLight = new AmbientLight({
   color: [255, 255, 255],
   intensity: 1.0,
@@ -112,7 +110,7 @@ class Map extends Component {
           reuseMaps
           mapStyle={mapStyles}
           preventStyleDiffing={true}
-          mapboxApiAccessToken={MAPBOX_TOKEN}
+          mapboxApiAccessToken={process.env.GATSBY_MAPBOX_TOKEN}
         />
       </DeckGL>
     )
