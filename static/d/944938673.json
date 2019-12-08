@@ -1,0 +1,1 @@
+{"errors":[{"message":"Cannot read property '0' of null","locations":[{"line":4,"column":7}],"path":["avatar","childImageSharp","fixed"]}],"data":{"avatar":{"childImageSharp":{"fixed":null}}}}
