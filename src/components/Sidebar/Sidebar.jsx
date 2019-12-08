@@ -12,11 +12,11 @@ import Divisor from "../Divisor"
 
 const Sidebar = props => {
   const data = useStaticQuery(graphql`
-    query BioQuery {
+    query ProfileQuery {
       avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
-          fixed(width: 500, height: 500) {
-            src
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -25,7 +25,7 @@ const Sidebar = props => {
 
   return (
     <div className={props.className}>
-      <ProfilePhoto photo={data.avatar.childImageSharp.fixed.src} />
+      <ProfilePhoto photo={data.avatar.childImageSharp.fluid} />
       <Title text="Pablo Pettinari" />
       <Subtitle text="Front End Engineer" />
 
