@@ -1,7 +1,8 @@
-import React from "react"
+import styled from "@emotion/styled"
 
-import "./styles.css"
-
-const Divisor = () => <hr className="Divisor" />
+const Divisor = styled.hr`
+  margin: 15px auto;
+  width: 150px;
+`
 
 export default Divisor

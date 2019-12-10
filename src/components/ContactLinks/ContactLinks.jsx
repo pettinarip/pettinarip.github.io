@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
@@ -23,10 +23,10 @@ const Link = styled.a`
   padding: 5px;
   margin: 0 3px;
   font-size: 18px;
-  color: #fff;
+  color: ${props => props.theme.colors.base};
 
   &:hover {
-    color: #d0c365;
+    color: ${props => props.theme.colors.primary};
   }
 `
 

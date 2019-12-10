@@ -1,9 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "@emotion/styled"
 
-import "./styles.css"
+const TitleStyled = styled.div`
+  font-size: 32px;
+  text-align: center;
+`
 
-const Title = ({ text }) => <div className="Title title">{text}</div>
+const Title = ({ text }) => <TitleStyled className="title">{text}</TitleStyled>
 
 Title.propTypes = {
   text: PropTypes.string,

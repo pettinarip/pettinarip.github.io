@@ -1,11 +1,30 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "@reach/router"
+import styled from "@emotion/styled"
 
-import "./styles.css"
+const ItemStyled = styled.div`
+  text-align: center;
+  padding: 10px 0;
+
+  :first-child {
+    padding-top: 0;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: ${props => props.theme.colors.base};
+  }
+
+  a.active,
+  a:hover {
+    color: ${props => props.theme.colors.primary};
+  }
+`
 
 const Item = props => (
-  <div className="Item">
+  <ItemStyled>
     <Link
       to={props.to}
       getProps={({ isPartiallyCurrent }) => {
@@ -16,7 +35,7 @@ const Item = props => (
     >
       {props.text}
     </Link>
-  </div>
+  </ItemStyled>
 )
 
 Item.propTypes = {
