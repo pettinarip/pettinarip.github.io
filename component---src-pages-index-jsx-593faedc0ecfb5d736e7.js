@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{Dtc0:function(t,o,n){"use strict";n.r(o);n("q1tI");var e=n("YwZP"),c=n("qKvR");o.default=function(){return Object(c.d)(e.Redirect,{from:"/",to:"/about",default:!0,noThrow:!0})}}}]);
