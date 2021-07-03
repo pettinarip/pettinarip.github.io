@@ -1,0 +1,1 @@
+(self.webpackChunkpettinarip_site=self.webpackChunkpettinarip_site||[]).push([[230],{4199:function(t,e,n){"use strict";n.r(e);var u=n(7294),i=n(5444);e.default=function(){return(0,u.useEffect)((function(){(0,i.navigate)("/about")}),[]),null}}}]);
