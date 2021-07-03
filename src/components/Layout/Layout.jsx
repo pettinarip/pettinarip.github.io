@@ -1,7 +1,7 @@
 import React from "react"
 import { Match } from "@reach/router"
 import { config } from "@fortawesome/fontawesome-svg-core"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 import styled from "@emotion/styled"
 
 import GlobalStyles from "../GlobalStyles"

@@ -15,9 +15,7 @@ const Sidebar = props => {
     query ProfileQuery {
       avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 200, placeholder: BLURRED)
         }
       }
     }
@@ -25,7 +23,7 @@ const Sidebar = props => {
 
   return (
     <div className={props.className}>
-      <ProfilePhoto photo={data.avatar.childImageSharp.fluid} />
+      <ProfilePhoto photo={data.avatar.childImageSharp} />
       <Title text="Pablo Pettinari" />
       <Subtitle text="Front End Engineer" />
 

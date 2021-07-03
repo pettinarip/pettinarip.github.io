@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 
 const ProfilePhotoStyled = styled.div`
@@ -15,11 +15,15 @@ const ProfilePhotoStyled = styled.div`
   }
 `
 
-const ProfilePhoto = ({ photo }) => (
-  <ProfilePhotoStyled>
-    <Img className="ProfilePhoto-photo" fluid={photo} alt="Profile" />
-  </ProfilePhotoStyled>
-)
+const ProfilePhoto = ({ photo }) => {
+  const image = getImage(photo)
+
+  return (
+    <ProfilePhotoStyled>
+      <GatsbyImage className="ProfilePhoto-photo" image={image} alt="Profile" />
+    </ProfilePhotoStyled>
+  )
+}
 
 ProfilePhoto.propTypes = {
   photo: PropTypes.object.isRequired,

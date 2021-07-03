@@ -1,6 +1,12 @@
-import React from "react"
-import { Redirect } from "@reach/router"
+import { useEffect } from "react"
+import { navigate } from "gatsby"
 
-const Home = () => <Redirect from="/" to="/about" default noThrow />
+const Home = () => {
+  useEffect(() => {
+    navigate("/about")
+  }, [])
+
+  return null
+}
 
 export default Home
